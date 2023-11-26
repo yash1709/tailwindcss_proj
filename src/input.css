@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* <body class="min-h-screen grid place-content-center radial-blue">
+    <div class="bg-emerald-500 w-52 h-52 rounded-full grid place-content-center">
+        <div class="bg-teal-200 w-32 h-32 grid rounded-full place-content-center">
+            <div class="bg-red-500 w-16 h-16 rounded-full"></div>
+        </div>
+    </div>
+</body>  */
+
+/* .radial-blue{
+    background: radial-gradient(lightyellow,skyblue);
+} */
+
+@layer utilities {
+    .section-min-height {
+        min-height: calc(100vh - 68px)
+    }
+
+    .toggle-btn {
+        @apply [&>div::before]:translate-y-0 [&>div::before]:rotate-45 [&>div::after]:translate-y-0 [&>div::after]:-rotate-45 [&>div]:bg-transparent [&>div]:rotate-[720deg]
+    }
+}
